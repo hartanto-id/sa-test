@@ -1,2 +1,68 @@
-# sa-test
-simple flow documentation
+# Simple Inventory & Sales App Documentation
+
+This app is designed for small retail store to manage their products, track stock and handle sales.  
+
+1. User Roles & Permissions  
+- Admin  
+  - Can do :  
+    - create new users and products.
+    - edit existing users and products.
+    - disable inactive product.
+    - delete unused product.
+    - adjust stock.
+    - view/print sales report.
+    - cancel sales transaction.
+  - Cannot do :  
+    - delete products that have been sold.
+- Cashier    
+  - Can do :  
+    - view product.
+    - create sales transaction.
+    - view sales transaction.
+    - view / print sales report. 
+  - Cannot do :  
+    - delete sales transaction.   
+2. Main features :
+- Login/Logout.  
+- User :  
+  - Add new users.
+  - Edit user details.
+  - Delete users when no longer used.  
+- Product :  
+  -	Add new products.  
+  -	Edit product details.  
+  -	Disable products when no longer available.
+  -	Delete products when not in used.  
+- Stock :
+  - View current stock of each product.
+  - Update stock after each sales transaction.
+  - Adjust stock.  
+- Sales :  
+  - Create sales transaction.  
+  - Cancel / void sales transaction.  
+  - Return sales transaction.
+  - View / print sales receipts for customers.
+  - View / print sales  report.
+3. Application flow :
+      1. User logs into the system.  
+      2. The system will perform a roles check.  
+      3. The admin menu will be displayed if the admin is logged in and the cashier menu will appear if the cashier is logged in.  
+      4. Admin add products including stock and add user for cashiers.  
+      5. Cashier create a sales transaction and print sales receipt.  
+      6. The system will reduce product stock automatically.  
+4. Basic Business Rules.  
+   - Only Admin can manage Users and Products.  
+   - Only Admin can adjust Stock.  
+   - Only Admin can cancel / return sales transaction.  
+   - Stock cannot be less than zero.  
+   - Sales can only be made if stock is available.  
+   - Products that have been sold cannot be deleted.  
+5. Error & Edge Cases  
+   - Admin submits stock of product less than 0.  
+     -> The system will display an error message and ask the user to correct the data.  
+   - Cashier tries to sell product with insufficient or excess stock.  
+     -> The system will display an error message and reject the data.  
+   - Admin tries to delete products that have been sold.  
+     -> The system will display an error message and cancel the request.  
+ 
+ ...
