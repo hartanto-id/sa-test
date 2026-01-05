@@ -1,0 +1,15 @@
+flowchart TD
+    A[Start] --> B[User Logs In]
+    B --> C[Check User Role]
+    C --> D{Is User Admin?}
+    
+    D -- Yes --> E[Display Admin Menu]
+    E --> F[Add Products & Stock]
+    F --> G[Add Cashier Users]
+    G --> H[End]
+
+    D -- No --> I[Display Cashier Menu]
+    I --> J[Create Sales Transaction]
+    J --> K[Print Sales Receipt]
+    K --> L[Reduce Product Stock]
+    L --> H
