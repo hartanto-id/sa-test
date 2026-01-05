@@ -64,5 +64,7 @@ This app is designed for small retail store to manage their products, track stoc
      -> The system will display an error message and reject the data.  
    - Admin tries to delete products that have been sold.  
      -> The system will display an error message and cancel the request.  
+ 6. Simple Flow Diagram  
+    - File attached.  
+
  
- ...
